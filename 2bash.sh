@@ -40,7 +40,7 @@ monitor_file() {
             echo "Change, mengembalikan backup..."
             cp "$BACKUP_FILE" "$INDEX_FILE"
             echo "index.php dikembalikan ke versi backup."
-            send_telegram_notification "Change. Backup File."
+            send_telegram_notification "Perubahan terdeteksi pada index.php. File dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
         fi
 
         # Tunggu 1 detik sebelum pengecekan selanjutnya
