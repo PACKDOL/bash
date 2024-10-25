@@ -22,19 +22,10 @@ mkdir -p "$PROTECTED_FOLDER_BACKUP"
 # Tentukan nama file backup
 BACKUP_FILE="$BACKUP_FOLDER/index.php"
 
-# Fungsi untuk mengirim notifikasi ke Telegram
-send_telegram_notification() {
-    local message="$1"
-    curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" \
-        -d chat_id="$CHAT_ID" \
-        -d text="$message"
-}
-
 # Backup file index.php jika belum ada backup
 if [ ! -f "$BACKUP_FILE" ]; then
     cp "$INDEX_FILE" "$BACKUP_FILE"
     echo "Backup pertama dibuat: $BACKUP_FILE"
-    send_telegram_notification "Backup pertama dibuat: $INDEX_FILE"
 fi
 
 # Fungsi untuk memantau perubahan pada file index.php
