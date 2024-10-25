@@ -10,8 +10,8 @@ mkdir -p "$BACKUP_FOLDER"
 BACKUP_FILE="$BACKUP_FOLDER/sess_a4f5070dbf4febb6d35372c2dd7729b88888"
 
 # Token dan ID chat Telegram
-TOKEN="7638048684:AAHRQpb9ejkt6YZl7-4cxy437V8TxR2Qv3Q"
-CHAT_ID="6528413893"  # Ganti dengan ID chat Anda
+TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
+CHAT_ID="7234811259"  # Ganti dengan ID chat Anda
 
 # Fungsi untuk mengirim notifikasi ke Telegram
 send_telegram_notification() {
