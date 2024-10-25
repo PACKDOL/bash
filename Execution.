@@ -1,0 +1,16 @@
+========================
+       Execution
+=======================
+chmod +x name.sh
+chmod +x name.sh && ./name.sh &
+.name.sh
+sudo apt-get install curl inotify-tools
+ps aux|grep sh
+ps -A | grep "nama.sh"
+
+===========================
+repair or stop the process
+===========================
+delet all proses nam.sh
+selec ti number name.sh
+kill 3951394
