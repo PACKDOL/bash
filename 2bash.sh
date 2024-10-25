@@ -7,7 +7,7 @@ BACKUP_FOLDER="/home/u0256282/public_html/file/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup
-BACKUP_FILE="$BACKUP_FOLDER/.logs-litespeed_flag"
+BACKUP_FILE="$BACKUP_FOLDER/logs-litespeed_flag"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
