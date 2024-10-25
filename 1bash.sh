@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# Definisikan lokasi file index.php
+# Definisikan lokasi file index.php dengan Permissions 755
 INDEX_FILE="/home/shirinba/public_html/index.php"
 
-# Definisikan lokasi folder backup
+# Definisikan lokasi folder backup dengan Permissions 755
 BACKUP_FOLDER="/home/shirinba/php"
 
-# Definisikan lokasi folder yang ingin dilindungi
+# Definisikan lokasi folder yang ingin dilindungi dengan Permissions 755
 PROTECTED_FOLDER="/home/shirinba/public_html/index.php"
 
-# Definisikan lokasi backup folder
+# Definisikan lokasi backup folder dengan Permissions 755
 PROTECTED_FOLDER_BACKUP="/home/shirinba/php/data"
 
-# Definisikan lokasi file log
+# Definisikan lokasi file log dengan Permissions 755
 LOG_FILE="/home/shirinba/php/data.log"
 
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 mkdir -p "$PROTECTED_FOLDER_BACKUP"
 
-# Tentukan nama file backup
+# Tentukan nama file backup dengan Permissions 755
 BACKUP_FILE="$BACKUP_FOLDER/index.php"
 
 # Backup file index.php jika belum ada backup
