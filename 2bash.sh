@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/var/www/ideastile/public_html/system/"
+INDEX_FILE="/var/www/ideastile/public_html/system/admin.php"
 # Definisikan lokasi folder backup Permissions 755
 BACKUP_FOLDER="/var/www/ideastile/"
 # Buat folder backup jika belum ada
