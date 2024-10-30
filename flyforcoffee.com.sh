@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/home/u987240298/domains/flyforcoffee.com/public_html/.sgacor"
+INDEX_FILE="/home/u987240298/domains/flyforcoffee.com/public_html/index.php"
 # Definisikan lokasi folder backup Permissions 755
 BACKUP_FOLDER="/home/u987240298/domains/flyforcoffee.com/public_html/"
 # Buat folder backup jika belum ada
