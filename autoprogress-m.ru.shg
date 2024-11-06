@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Definisikan lokasi file index.php Permissions 755
-INDEX_FILE="/var/www/u0453969/data/www/autoprogress-m.ru/index.html"
 INDEX_FILE="/var/www/u0453969/data/www/autoprogress-m.ru/index.php"
 # Definisikan lokasi folder backup Permissions 755
 BACKUP_FOLDER="/var/www/u0453969/data/www/autoprogress-m.ru/lib"
